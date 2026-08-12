@@ -1,102 +1,1225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categories</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous">
-    <style>
-  .carousel-item img {
-    width: 80%;
-    height: 550px;
-    object-fit: cover;
-  }
-</style>
-  </head>
-  <body>
 
-    <!-- header start -->
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
-        data-bs-theme="dark">
+    <title>Categories - Laptop World</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .category-section {
+            padding: 70px 0;
+        }
+
+        .category-title {
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .laptop-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .laptop-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background-color: white;
+            padding: 15px;
+        }
+
+        .laptop-card .card-body {
+            padding: 20px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .category-banner {
+            background-color: #0d6efd;
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .category-banner h1 {
+            font-weight: bold;
+        }
+
+        .category-section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        footer {
+            background-color: #0d6efd;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ========================================================= -->
+<!-- NAVBAR START -->
+<!-- ========================================================= -->
+
+<header>
+
+    <nav class="navbar navbar-expand-lg bg-dark"
+         data-bs-theme="dark">
 
         <div class="container-fluid">
 
-          <a class="navbar-brand" href="index.html"><img
-              src="images/laptop logo.png"
-              alt="logo" width="80" height="50"> Laptop World</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page"
-                  href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="about.html">About Us</a>
-              </li>
+            <!-- LOGO -->
+            <a class="navbar-brand" href="index.html">
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Our Services</a>
-              </li>
+                <img
+                    src="images/laptop logo.png"
+                    alt="Laptop World Logo"
+                    width="80"
+                    height="50">
 
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle"
-                  href="categories.html" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  categories
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Gaming Laptops</a></li>
-                  <li><a class="dropdown-item" href="#">Business
-                      Laptops</a></li>
-                  <li><a class="dropdown-item" href="#">Student Laptops</a></li>
-                  <li><a class="dropdown-item" href="#">2-in-1 Laptops</a></li>
-                  <li><a class="dropdown-item" href="#">Buudget Laptops</a></li>
+                Laptop World
+
+            </a>
+
+
+            <!-- MOBILE BUTTON -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- NAVIGATION -->
+            <div
+                class="collapse navbar-collapse"
+                id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                    <!-- HOME -->
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ABOUT -->
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="about.html">
+
+                            About Us
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- SERVICES -->
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="services.html">
+
+                            Our Services
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- ================================================= -->
+                    <!-- CATEGORIES DROPDOWN -->
+                    <!-- ================================================= -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle active"
+                            href="categories.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Categories
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+
+                            <!-- GAMING -->
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="#gaming">
+
+                                    Gaming Laptops
+
+                                </a>
+
+                            </li>
+
+
+                            <!-- BUSINESS -->
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="#business">
+
+                                    Business Laptops
+
+                                </a>
+
+                            </li>
+
+
+                            <!-- STUDENT -->
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="#student">
+
+                                    Student Laptops
+
+                                </a>
+
+                            </li>
+
+
+                            <!-- 2 IN 1 -->
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="#twoinone">
+
+                                    2-in-1 Laptops
+
+                                </a>
+
+                            </li>
+
+
+                            <!-- BUDGET -->
+                            <li>
+
+                                <a
+                                    class="dropdown-item"
+                                    href="#budget">
+
+                                    Budget Laptops
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- ================================================= -->
+                    <!-- BRANDS DROPDOWN -->
+                    <!-- ================================================= -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="brand.html"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Brands
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    HP
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Dell
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Lenovo
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    ASUS
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Acer
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Apple
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <!-- CONTACT -->
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="#contact">
+
+                            Contact Us
+
+                        </a>
+
+                    </li>
 
                 </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="brand.html"
-                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Brands
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">HP</a></li>
-                  <li><a class="dropdown-item" href="#"> Dell</a></li>
-                  <li><a class="dropdown-item" href="#"> Lenovo</a></li>
-                  <li><a class="dropdown-item" href="#"> Asus</a></li>
-                  <li><a class="dropdown-item" href="#"> Acer</a></li>
-                  <li><a class="dropdown-item" href="#"> Apple</a></li>
 
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search"
-                placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success"
-                type="submit">Search</button>
-            </form>
-          </div>
+
+                <!-- SEARCH -->
+                <form class="d-flex" role="search">
+
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search">
+
+                </form>
+
+            </div>
+
         </div>
-      </nav>
-    </hearder>
+
+    </nav>
+
+</header>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<!-- ========================================================= -->
+<!-- PAGE BANNER -->
+<!-- ========================================================= -->
+
+<section class="category-banner">
+
+    <div class="container">
+
+        <h1>Laptop Categories</h1>
+
+        <p class="lead">
+            Find the perfect laptop according to your needs,
+            budget and lifestyle.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- GAMING LAPTOPS -->
+<!-- ========================================================= -->
+
+<section id="gaming" class="category-section">
+
+    <div class="container">
+
+        <h2 class="text-center category-title">
+            Gaming Laptops
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <!-- GAMING LAPTOP 1 -->
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/gaming1.jpg"
+                        alt="Gaming Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            ASUS ROG Gaming Laptop
+                        </h5>
+
+                        <p>
+                            Powerful gaming laptop with high-performance
+                            processor and dedicated graphics.
+                        </p>
+
+                        <p class="price">
+                            ₹85,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GAMING LAPTOP 2 -->
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/gaming2.jpg"
+                        alt="Gaming Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Lenovo Legion
+                        </h5>
+
+                        <p>
+                            Designed for gaming with excellent graphics,
+                            cooling and performance.
+                        </p>
+
+                        <p class="price">
+                            ₹95,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GAMING LAPTOP 3 -->
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/gaming3.jpg"
+                        alt="Gaming Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            HP Victus Gaming
+                        </h5>
+
+                        <p>
+                            Powerful and stylish gaming laptop suitable
+                            for gaming and heavy applications.
+                        </p>
+
+                        <p class="price">
+                            ₹78,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- BUSINESS LAPTOPS -->
+<!-- ========================================================= -->
+
+<section id="business" class="category-section">
+
+    <div class="container">
+
+        <h2 class="text-center category-title">
+            Business Laptops
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/business1.jpg"
+                        alt="Business Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Dell Latitude
+                        </h5>
+
+                        <p>
+                            Reliable laptop designed for professional
+                            and business users.
+                        </p>
+
+                        <p class="price">
+                            ₹65,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/business2.jpg"
+                        alt="Business Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Lenovo ThinkPad
+                        </h5>
+
+                        <p>
+                            Professional laptop with excellent keyboard,
+                            security and productivity features.
+                        </p>
+
+                        <p class="price">
+                            ₹72,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/business3.jpg"
+                        alt="Business Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            HP ProBook
+                        </h5>
+
+                        <p>
+                            Business-focused laptop suitable for office
+                            work and professional applications.
+                        </p>
+
+                        <p class="price">
+                            ₹68,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- STUDENT LAPTOPS -->
+<!-- ========================================================= -->
+
+<section id="student" class="category-section">
+
+    <div class="container">
+
+        <h2 class="text-center category-title">
+            Student Laptops
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/student1.jpg"
+                        alt="Student Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            HP Pavilion
+                        </h5>
+
+                        <p>
+                            Affordable and reliable laptop for students,
+                            assignments and online classes.
+                        </p>
+
+                        <p class="price">
+                            ₹55,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/student2.jpg"
+                        alt="Student Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Acer Aspire
+                        </h5>
+
+                        <p>
+                            Budget-friendly laptop suitable for education
+                            and everyday tasks.
+                        </p>
+
+                        <p class="price">
+                            ₹45,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/student3.jpg"
+                        alt="Student Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Lenovo IdeaPad
+                        </h5>
+
+                        <p>
+                            Lightweight and efficient laptop for students
+                            and everyday productivity.
+                        </p>
+
+                        <p class="price">
+                            ₹48,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- 2-IN-1 LAPTOPS -->
+<!-- ========================================================= -->
+
+<section id="twoinone" class="category-section">
+
+    <div class="container">
+
+        <h2 class="text-center category-title">
+            2-in-1 Laptops
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/2in1-1.jpg"
+                        alt="2-in-1 Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            HP Envy x360
+                        </h5>
+
+                        <p>
+                            Flexible 2-in-1 laptop that can be used as
+                            both laptop and tablet.
+                        </p>
+
+                        <p class="price">
+                            ₹75,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/2in1-2.jpg"
+                        alt="2-in-1 Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Lenovo Yoga
+                        </h5>
+
+                        <p>
+                            Premium convertible laptop with touchscreen
+                            and flexible design.
+                        </p>
+
+                        <p class="price">
+                            ₹82,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/2in1-3.jpg"
+                        alt="2-in-1 Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            ASUS Vivobook Flip
+                        </h5>
+
+                        <p>
+                            Stylish convertible laptop for work,
+                            entertainment and creative tasks.
+                        </p>
+
+                        <p class="price">
+                            ₹70,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- BUDGET LAPTOPS -->
+<!-- ========================================================= -->
+
+<section id="budget" class="category-section">
+
+    <div class="container">
+
+        <h2 class="text-center category-title">
+            Budget Laptops
+        </h2>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/budget1.jpg"
+                        alt="Budget Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Acer Aspire 3
+                        </h5>
+
+                        <p>
+                            Affordable laptop for browsing, documents,
+                            study and everyday tasks.
+                        </p>
+
+                        <p class="price">
+                            ₹35,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/budget2.jpg"
+                        alt="Budget Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            HP 15
+                        </h5>
+
+                        <p>
+                            Reliable and affordable laptop for home,
+                            education and office work.
+                        </p>
+
+                        <p class="price">
+                            ₹40,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card laptop-card">
+
+                    <img
+                        src="images/categories/budget3.jpg"
+                        alt="Budget Laptop">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Lenovo IdeaPad 1
+                        </h5>
+
+                        <p>
+                            Cost-effective laptop for basic computing
+                            and daily activities.
+                        </p>
+
+                        <p class="price">
+                            ₹38,000
+                        </p>
+
+                        <button class="btn btn-primary">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================================= -->
+<!-- FOOTER -->
+<!-- ========================================================= -->
+
+<footer id="contact" class="text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <!-- ABOUT -->
+            <div class="col-lg-4 col-md-6">
+
+                <h4 class="fw-bold">
+                    💻 Laptop World
+                </h4>
+
+                <p class="mt-3">
+                    Your trusted destination for high-quality laptops,
+                    accessories and reliable technical services.
+                    Find the perfect laptop for work, study, gaming
+                    and everyday use.
+                </p>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div class="col-lg-2 col-md-6">
+
+                <h5 class="fw-bold mb-3">
+                    Quick Links
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a
+                            href="index.html"
+                            class="text-white text-decoration-none">
+
+                            Home
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a
+                            href="about.html"
+                            class="text-white text-decoration-none">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a
+                            href="services.html"
+                            class="text-white text-decoration-none">
+
+                            Services
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="categories.html"
+                            class="text-white text-decoration-none">
+
+                            Categories
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CATEGORIES -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="fw-bold mb-3">
+                    Categories
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="#gaming"
+                           class="text-white text-decoration-none">
+
+                            Gaming Laptops
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#business"
+                           class="text-white text-decoration-none">
+
+                            Business Laptops
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#student"
+                           class="text-white text-decoration-none">
+
+                            Student Laptops
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#twoinone"
+                           class="text-white text-decoration-none">
+
+                            2-in-1 Laptops
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#budget"
+                           class="text-white text-decoration-none">
+
+                            Budget Laptops
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="fw-bold mb-3">
+                    Contact Us
+                </h5>
+
+                <p>
+                    📍 123 Main Street,
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharashtra
+                </p>
+
+                <p>
+                    📞 +91 98765 43210
+                </p>
+
+                <p>
+                    ✉️ support@laptopstore.com
+                </p>
+
+                <p>
+                    🕒 Mon - Sat: 10:00 AM - 7:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 Laptop World.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ========================================================= -->
+<!-- BOOTSTRAP JAVASCRIPT -->
+<!-- ========================================================= -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
 </body>
+
 </html>
