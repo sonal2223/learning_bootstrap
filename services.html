@@ -1,191 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Page</title>
+
+    <title>Services - Laptop World</title>
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
+
     <style>
-  .carousel-item img {
-    width: 80%;
-    height: 550px;
-    object-fit: cover;
-  }
-</style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Service cards */
+        .service-card {
+            height: 100%;
+            transition: 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card img {
+            height: 185px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-card .card-body {
+            min-height: 205px;
+        }
+
+        /* Modal images */
+        .modal-main-image {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .service-small-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer a:hover {
+            text-decoration: underline !important;
+        }
+    </style>
   </head>
+
   <body>
 
-    <!-- header start -->
+    <!-- ===================================================== -->
+    <!-- NAVBAR -->
+    <!-- ===================================================== -->
+
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+
+      <nav class="navbar navbar-expand-lg bg-dark"
         data-bs-theme="dark">
 
         <div class="container-fluid">
 
-          <a class="navbar-brand" href="index.html"><img
-              src="images/laptop logo.png"
-              alt="logo" width="80" height="50"> Laptop World</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="images/laptop logo.png"
+              alt="Laptop Logo"
+              width="80"
+              height="50">
+            Laptop World
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
             aria-label="Toggle navigation">
+
             <span class="navbar-toggler-icon"></span>
+
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse"
+            id="navbarSupportedContent">
+
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <!-- Home -->
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page"
-                  href="index.html">Home</a>
+                <a class="nav-link"
+                  href="index.html">
+                  Home
+                </a>
               </li>
+
+              <!-- About -->
               <li class="nav-item">
-                <a class="nav-link active" href="about.html">About Us</a>
+                <a class="nav-link"
+                  href="about.html">
+                  About Us
+                </a>
               </li>
 
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Our Services</a>
-            </li>
+              <!-- Services -->
+              <li class="nav-item">
+                <a class="nav-link active"
+                  aria-current="page"
+                  href="services.html">
+                  Our Services
+                </a>
+              </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle"
-                href="categories.html" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                categories
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Gaming Laptops</a></li>
-                <li><a class="dropdown-item" href="#">Business
-                    Laptops</a></li>
-                <li><a class="dropdown-item" href="#">Student Laptops</a></li>
-                <li><a class="dropdown-item" href="#">2-in-1 Laptops</a></li>
-                <li><a class="dropdown-item" href="#">Buudget Laptops</a></li>
+              <!-- Categories -->
+              <li class="nav-item dropdown">
 
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="brand.html"
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Brands
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">HP</a></li>
-                <li><a class="dropdown-item" href="#"> Dell</a></li>
-                <li><a class="dropdown-item" href="#"> Lenovo</a></li>
-                <li><a class="dropdown-item" href="#"> Asus</a></li>
-                <li><a class="dropdown-item" href="#"> Acer</a></li>
-                <li><a class="dropdown-item" href="#"> Apple</a></li>
+                <a class="nav-link dropdown-toggle"
+                  href="categories.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
 
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search"
-              placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-success"
-              type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </hearder>
+                  Categories
 
-  <section id="services" class="py-5 text-center bg-primary ">
+                </a>
 
-    <div class="container">
+                <ul class="dropdown-menu">
 
-        <h2 class="text-center fw-bold mb-2 text-dark">
-            What We Provide
-        </h2>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Gaming Laptops
+                    </a>
+                  </li>
 
-        <p class="text-center text-muted mb-5 text-white">
-            Reliable services for your laptop and technology needs.
-        </p>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Business Laptops
+                    </a>
+                  </li>
 
-        <!-- Your service cards/table here -->
-              <div class="container">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Student Laptops
+                    </a>
+                  </li>
 
-        <div class="row">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      2-in-1 Laptops
+                    </a>
+                  </li>
 
-          <!-- Table -->
-          <div class="col-md-6">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Budget Laptops
+                    </a>
+                  </li>
 
-            <h2 class="mb-4 text-dark">Our Products</h2>
+                </ul>
 
-            <table class="table table-primary table-striped table-bordered text-white">
+              </li>
 
-              <thead>
-                <tr>
-                  <th>Sr.No</th>
-                  <th>Laptop Name</th>
-                  <th>Price</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
+              <!-- Brands -->
+              <li class="nav-item dropdown">
 
-              <tbody>
+                <a class="nav-link dropdown-toggle"
+                  href="brand.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
 
-                <tr>
-                  <td>1</td>
-                  <td>HP Pavilion</td>
-                  <td>55000</td>
-                  <td>Great for everyday use</td>
-                </tr>
+                  Brands
 
-                <tr>
-                  <td>2</td>
-                  <td>Dell Inspiron</td>
-                  <td>40000</td>
-                  <td>Perfect for business professionals</td>
-                </tr>
+                </a>
 
-                <tr>
-                  <td>3</td>
-                  <td>Lenovo ThinkPad</td>
-                  <td>35000</td>
-                  <td>Excellent for productivity</td>
-                </tr>
+                <ul class="dropdown-menu">
 
-                <tr>
-                  <td>4</td>
-                  <td>ASUS ZenBook</td>
-                  <td>56000</td>
-                  <td>Lightweight and stylish</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Acer Swift</td>
-                  <td>45000</td>
-                  <td>Affordable and reliable</td>
-                </tr>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      HP
+                    </a>
+                  </li>
 
-                <tr>
-                  <td>6</td>
-                  <td>Apple MacBook Air</td>
-                  <td>90000</td>
-                  <td>Powerful and sleek</td>
-                </tr>
-              </tbody>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Dell
+                    </a>
+                  </li>
 
-            </table>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Lenovo
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      ASUS
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Acer
+                    </a>
+                  </li>
+
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Apple
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <!-- Contact -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Contact Us
+                </a>
+              </li>
+
+            </ul>
+
+            <!-- Search -->
+            <form class="d-flex" role="search">
+
+              <input class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search">
+
+            </form>
 
           </div>
 
+        </div>
+
+      </nav>
+
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- WHAT WE PROVIDE -->
+    <!-- ===================================================== -->
+
+    <section id="services"
+      class="py-5 text-center bg-primary">
+
+      <div class="container">
+
+        <h2 class="fw-bold mb-2 text-dark">
+          What We Provide
+        </h2>
+
+        <p class="mb-5 text-light">
+          Reliable services for your laptop and technology needs.
+        </p>
+
+        <div class="row">
+
+          <!-- ================================================= -->
+          <!-- PRODUCTS TABLE -->
+          <!-- ================================================= -->
+
+          <div class="col-md-6">
+
+            <h2 class="mb-4 text-dark">
+              Our Products
+            </h2>
+
+            <div class="table-responsive">
+
+              <table
+                class="table table-primary table-striped table-bordered">
+
+                <thead>
+
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>Laptop Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                  </tr>
+
+                </thead>
+
+                <tbody>
+
+                  <tr>
+                    <td>1</td>
+                    <td>HP Pavilion</td>
+                    <td>₹55,000</td>
+                    <td>Great for everyday use</td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>Dell Inspiron</td>
+                    <td>₹40,000</td>
+                    <td>Perfect for business professionals</td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+                    <td>Lenovo ThinkPad</td>
+                    <td>₹35,000</td>
+                    <td>Excellent for productivity</td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>ASUS ZenBook</td>
+                    <td>₹56,000</td>
+                    <td>Lightweight and stylish</td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>Acer Swift</td>
+                    <td>₹45,000</td>
+                    <td>Affordable and reliable</td>
+                  </tr>
+
+                  <tr>
+                    <td>6</td>
+                    <td>Apple MacBook Air</td>
+                    <td>₹90,000</td>
+                    <td>Powerful and sleek</td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+
+            </div>
+
+          </div>
+
+          <!-- ================================================= -->
           <!-- FAQ -->
+          <!-- ================================================= -->
 
           <div class="col-md-6 mb-4">
 
-            <h2 class="mb-4 text-dark">Frequently Asked Questions</h2>
+            <h2 class="mb-4 text-dark">
+              Frequently Asked Questions
+            </h2>
 
-            <div class="accordion" id="accordionExample">
+            <div class="accordion"
+              id="accordionExample">
 
               <!-- FAQ 1 -->
+
               <div class="accordion-item">
 
                 <h2 class="accordion-header">
@@ -206,8 +394,11 @@
                   data-bs-parent="#accordionExample">
 
                   <div class="accordion-body">
-                    HP Pavilion and Lenovo ThinkPad are excellent choices for
-                    students due to their performance and affordability.
+
+                    HP Pavilion and Lenovo ThinkPad are
+                    excellent choices for students due to
+                    their performance and affordability.
+
                   </div>
 
                 </div>
@@ -236,8 +427,10 @@
                   data-bs-parent="#accordionExample">
 
                   <div class="accordion-body">
-                    Yes. All laptops include the manufacturer's standard
-                    warranty.
+
+                    Yes. All laptops include the manufacturer's
+                    standard warranty.
+
                   </div>
 
                 </div>
@@ -266,11 +459,18 @@
                   data-bs-parent="#accordionExample">
 
                   <div class="accordion-body">
-                    Yes. Most laptops support RAM and SSD upgrades depending on
-                    the model.
+
+                    Yes. Most laptops support RAM and SSD
+                    upgrades depending on the model.
+
                   </div>
+
                 </div>
+
               </div>
+
+              <!-- FAQ 4 -->
+
               <div class="accordion-item">
 
                 <h2 class="accordion-header">
@@ -291,8 +491,11 @@
                   data-bs-parent="#accordionExample">
 
                   <div class="accordion-body">
-                    We offer a wide range of laptops from trusted brands
-                    including HP, Dell, Lenovo, ASUS, Acer, and Apple.
+
+                    We offer a wide range of laptops from
+                    trusted brands including HP, Dell,
+                    Lenovo, ASUS, Acer, and Apple.
+
                   </div>
 
                 </div>
@@ -300,65 +503,6 @@
               </div>
 
             </div>
-          </div>
-        </div>
-    </div>
-
-</section>
-
-
-  <main>
-    <style>
-      .card:hover{
-        background-color:black;
-        color:white;
-      }
-     </style>
-    <!-- ================= OUR SERVICES ================= -->
-
-<section class="bg-light">
-
-  <div class="container p-4">
-
-    <div class="row">
-
-      <h2 class="text-dark p-4 text-center">
-        Our Services
-      </h2>
-
-
-      <!-- ================= SERVICE 1 ================= -->
-
-      <div class="col-md-3">
-
-        <div class="card" style="width: 18rem;">
-
-          <!-- Add your service image later -->
-          <img
-            src="images/service/repair1.jpg"
-            class="card-img-top"
-            alt="Laptop Repair Service">
-
-          <div class="card-body">
-
-            <h5 class="card-title">
-              Laptop Repair
-            </h5>
-
-            <p class="card-text">
-              Professional laptop repair and troubleshooting
-              services for hardware and software problems.
-            </p>
-
-            <button
-              type="button"
-              class="btn btn-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#serviceModal">
-
-              Read More
-
-            </button>
 
           </div>
 
@@ -366,273 +510,192 @@
 
       </div>
 
+    </section>
 
-      <!-- ================= SERVICE 2 ================= -->
+    <!-- ===================================================== -->
+    <!-- OUR SERVICES -->
+    <!-- ===================================================== -->
 
-      <div class="col-md-3">
+    <main>
 
-        <div class="card" style="width: 18rem;">
-
-          <!-- Add your service image later -->
-          <img
-            src="images/service2.jpg"
-            class="card-img-top"
-            alt="Laptop Upgrade Service">
-
-          <div class="card-body">
-
-            <h5 class="card-title">
-              RAM & SSD Upgrade
-            </h5>
-
-            <p class="card-text">
-              Upgrade your laptop's RAM and SSD to improve
-              speed, storage and overall performance.
-            </p>
-
-            <button
-              type="button"
-              class="btn btn-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#serviceModal">
-
-              Read More
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- ================= SERVICE 3 ================= -->
-
-      <div class="col-md-3">
-
-        <div class="card" style="width: 18rem;">
-
-          <!-- Add your service image later -->
-          <img
-            src="images/service3.jpg"
-            class="card-img-top"
-            alt="Laptop Software Service">
-
-          <div class="card-body">
-
-            <h5 class="card-title">
-              Software Installation
-            </h5>
-
-            <p class="card-text">
-              Windows installation, software setup, drivers
-              and system configuration services.
-            </p>
-
-            <button
-              type="button"
-              class="btn btn-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#serviceModal">
-
-              Read More
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- ================= SERVICE 4 ================= -->
-
-      <div class="col-md-3">
-
-        <div class="card" style="width: 18rem;">
-
-          <!-- Add your service image later -->
-          <img
-            src="images/service4.jpg"
-            class="card-img-top"
-            alt="Laptop Maintenance Service">
-
-          <div class="card-body">
-
-            <h5 class="card-title">
-              Laptop Maintenance
-            </h5>
-
-            <p class="card-text">
-              Complete laptop cleaning and maintenance to
-              keep your device running smoothly.
-            </p>
-
-            <button
-              type="button"
-              class="btn btn-dark"
-              data-bs-toggle="modal"
-              data-bs-target="#serviceModal">
-
-              Read More
-
-            </button>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ================================================= -->
-<!-- SERVICE DETAILS MODAL -->
-<!-- ================================================= -->
-
-<div
-  class="modal fade"
-  id="serviceModal"
-  tabindex="-1"
-  aria-labelledby="serviceModalLabel"
-  aria-hidden="true">
-
-
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-
-
-    <div class="modal-content">
-
-
-      <!-- ================= HEADER ================= -->
-
-      <div class="modal-header">
-
-        <h1
-          class="modal-title fs-4 fw-bold"
-          id="serviceModalLabel">
-
-          SERVICE DETAILS
-
-        </h1>
-
-
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close">
-
-        </button>
-
-      </div>
-
-
-      <!-- ================= BODY ================= -->
-
-      <div class="modal-body">
-
-
-        <!-- ========================================= -->
-        <!-- MAIN IMAGE + SERVICE INFORMATION -->
-        <!-- ========================================= -->
+      <section class="bg-light py-5">
 
         <div class="container">
 
-          <div class="row align-items-center g-4">
+          <h2 class="text-dark text-center mb-5 fw-bold">
+            Our Services
+          </h2>
 
+          <div class="row g-4">
 
-            <!-- MAIN IMAGE -->
+            <!-- ================================================= -->
+            <!-- SERVICE 1 - LAPTOP REPAIR -->
+            <!-- ================================================= -->
 
-            <div class="col-md-6 text-center">
+            <div class="col-lg-3 col-md-6">
 
-              <!-- Upload your main service image here -->
+              <div class="card service-card">
 
-              <img
-                src="images/service/repaire.jpg"
-                class="img-fluid rounded"
-                style="
-                  width:100%;
-                  height:350px;
-                  object-fit:contain;
-                "
-                alt="Laptop Service">
+                <img src="images/service/repair1.jpg"
+                  class="card-img-top"
+                  alt="Laptop Repair Service">
+
+                <div class="card-body">
+
+                  <h5 class="card-title">
+                    Laptop Repair
+                  </h5>
+
+                  <p class="card-text">
+
+                    Professional laptop repair and
+                    troubleshooting services for hardware
+                    and software problems.
+
+                  </p>
+
+                  <!-- IMPORTANT: repairModal -->
+
+                  <button type="button"
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#repairModal">
+
+                    Read More
+
+                  </button>
+
+                </div>
+
+              </div>
 
             </div>
 
+            <!-- ================================================= -->
+            <!-- SERVICE 2 - RAM & SSD -->
+            <!-- ================================================= -->
 
-            <!-- SERVICE INFORMATION -->
+            <div class="col-lg-3 col-md-6">
 
-            <div class="col-md-6">
+              <div class="card service-card">
 
+                <img src="images/service/ssd.jpg"
+                  class="card-img-top"
+                  alt="RAM and SSD Upgrade Service">
 
-              <h2 class="fw-bold">
-                Laptop Repair & Maintenance
-              </h2>
+                <div class="card-body">
 
+                  <h5 class="card-title">
+                    RAM & SSD Upgrade
+                  </h5>
 
-              <h5 class="fw-bold mt-3">
-                Service Information
-              </h5>
+                  <p class="card-text">
 
+                    Upgrade your laptop's RAM and SSD
+                    to improve speed, storage and
+                    overall performance.
 
-              <p>
-                We provide professional laptop repair and
-                maintenance services for students,
-                professionals and business users.
-              </p>
+                  </p>
 
+                  <!-- IMPORTANT: upgradeModal -->
 
-              <h5 class="fw-bold mt-3">
-                Description
-              </h5>
+                  <button type="button"
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#upgradeModal">
 
+                    Read More
 
-              <p>
-                Our experienced technicians diagnose hardware
-                and software problems and provide reliable
-                solutions to improve your laptop's performance
-                and extend its life.
-              </p>
+                  </button>
 
+                </div>
 
-              <h5 class="fw-bold mt-3">
-                Features
-              </h5>
+              </div>
 
+            </div>
 
-              <ul>
+            <!-- ================================================= -->
+            <!-- SERVICE 3 - SOFTWARE -->
+            <!-- ================================================= -->
 
-                <li>
-                  Hardware troubleshooting
-                </li>
+            <div class="col-lg-3 col-md-6">
 
-                <li>
-                  Software troubleshooting
-                </li>
+              <div class="card service-card">
 
-                <li>
-                  Laptop cleaning
-                </li>
+                <img src="images/service/software1.webp"
+                  class="card-img-top"
+                  alt="Laptop Software Installation Service">
 
-                <li>
-                  Performance optimization
-                </li>
+                <div class="card-body">
 
-                <li>
-                  Hardware replacement
-                </li>
+                  <h5 class="card-title">
+                    Software Installation
+                  </h5>
 
-              </ul>
+                  <p class="card-text">
 
+                    Windows installation, software setup,
+                    drivers and system configuration
+                    services.
+
+                  </p>
+
+                  <!-- IMPORTANT: softwareModal -->
+
+                  <button type="button"
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#softwareModal">
+
+                    Read More
+
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- ================================================= -->
+            <!-- SERVICE 4 - MAINTENANCE -->
+            <!-- ================================================= -->
+
+            <div class="col-lg-3 col-md-6">
+
+              <div class="card service-card">
+
+                <img src="images/service/main2.avif"
+                  class="card-img-top"
+                  alt="Laptop Maintenance Service">
+
+                <div class="card-body">
+
+                  <h5 class="card-title">
+                    Laptop Maintenance
+                  </h5>
+
+                  <p class="card-text">
+
+                    Complete laptop cleaning and maintenance
+                    to keep your device running smoothly.
+
+                  </p>
+
+                  <!-- IMPORTANT: maintenanceModal -->
+
+                  <button type="button"
+                    class="btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#maintenanceModal">
+
+                    Read More
+
+                  </button>
+
+                </div>
+
+              </div>
 
             </div>
 
@@ -640,133 +703,722 @@
 
         </div>
 
+      </section>
 
-        <!-- DIVIDER -->
+      <!-- ===================================================== -->
+      <!-- MODAL 1 - LAPTOP REPAIR -->
+      <!-- ===================================================== -->
 
-        <hr class="my-5">
+      <div class="modal fade"
+        id="repairModal"
+        tabindex="-1"
+        aria-labelledby="repairModalLabel"
+        aria-hidden="true">
 
+        <div class="modal-dialog modal-xl modal-dialog-centered">
 
-        <!-- ========================================= -->
-        <!-- IMAGE 2 + INFORMATION + IMAGE 3 -->
-        <!-- ========================================= -->
+          <div class="modal-content">
 
-        <div class="container">
+            <div class="modal-header">
 
-          <div class="row align-items-center g-4">
+              <h1 class="modal-title fs-4 fw-bold text-center"
+                id="repairModalLabel">
 
+                LAPTOP REPAIR SERVICE
 
-            <!-- IMAGE 2 -->
+              </h1>
 
-            <div class="col-md-4 text-center">
-
-
-              <h5 class="fw-bold mb-3">
-                Laptop Repair
-              </h5>
-
-
-              <!-- Upload Image 2 later -->
-
-              <img
-                src="images/service/repaire2.jpg"
-                class="img-fluid rounded"
-                style="
-                  width:100%;
-                  height:230px;
-                  object-fit:contain;
-                "
-                alt="Laptop Repair">
-
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+              </button>
 
             </div>
 
+            <div class="modal-body">
 
-            <!-- MIDDLE INFORMATION -->
+              <div class="container">
 
-            <div class="col-md-4">
+                <div class="row align-items-center g-4">
 
-              <h5 class="fw-bold mt-4">
-                Benefits
-              </h5>
+                  <!-- Image -->
 
+                  <div class="col-md-6 text-center">
 
-              <p>
-                Our services improve laptop performance,
-                reduce system problems, increase reliability
-                and help extend the life of your device.
-              </p>
+                    <img src="images/service/repair1.jpg"
+                      class="modal-main-image"
+                      alt="Laptop Repair">
 
+                  </div>
+
+                  <!-- Information -->
+
+                  <div class="col-md-6">
+
+                    <h2 class="fw-bold text-center">
+                      Laptop Repair
+                    </h2>
+
+                    <h5 class="fw-bold mt-4">
+                      Service Information
+                    </h5>
+
+                    <p>
+
+                      We provide professional laptop
+                      repair services for hardware and
+                      software-related problems.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4 ">
+                      Description
+                    </h5>
+
+                    <p>
+
+                      Our experienced technicians diagnose
+                      laptop problems and provide reliable
+                      solutions to restore your device's
+                      performance.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4 ">
+                      Features
+                    </h5>
+
+                    <ul>
+
+                      <li>Hardware troubleshooting</li>
+                      <li>Software troubleshooting</li>
+                      <li>Laptop cleaning</li>
+                      <li>Performance optimization</li>
+                      <li>Hardware replacement</li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <hr class="my-5">
+
+              <!-- Benefits -->
+
+              <div class="container">
+
+                <div class="row g-4">
+
+                  <div class="col-md-4 ">
+
+                    <h5 class="fw-bold mb-3">
+                      Hardware Repair
+                    </h5>
+
+                    <img src="images/service/repaire2.jpg"
+                      class="service-small-image"
+                      alt="Hardware Repair">
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                    <h5 class="fw-bold text-center">
+                      Benefits
+                    </h5>
+
+                    <p>
+                      Regular laptop repair and maintenance improves system
+                      performance,
+                      prevents overheating, reduces unexpected problems,
+                      increases the
+                      lifespan of hardware components, and keeps your laptop
+                      running smoothly.
+                      It also helps prevent major repairs and saves maintenance
+                      costs in the
+                      long term.
+                    </p>
+
+                  </div>
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      Laptop Maintenance
+                    </h5>
+
+                    <img src="images/service/maintenance.jpg"
+                      class="service-small-image"
+                      alt="Laptop Maintenance">
+
+                  </div>
+
+                </div>
+
+              </div>
 
             </div>
 
+            <div class="modal-footer">
 
-            <!-- IMAGE 3 -->
+              <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
 
-            <div class="col-md-4 text-center">
+                Close
 
-
-              <h5 class="fw-bold mb-3">
-                Laptop Maintenance
-              </h5>
-
-
-              <!-- Upload Image 3 later -->
-
-              <img
-                src="images/service/maintenance.jpg"
-                class="img-fluid "
-                style="
-                  width:100%;
-                  height:230px;
-                  object-fit:contain;
-                "
-                alt="Laptop Maintenance">
-
+              </button>
 
             </div>
-
 
           </div>
 
         </div>
 
+      </div>
+
+      <!-- ===================================================== -->
+      <!-- MODAL 2 - RAM & SSD UPGRADE -->
+      <!-- ===================================================== -->
+
+      <div class="modal fade"
+        id="upgradeModal"
+        tabindex="-1"
+        aria-labelledby="upgradeModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+
+          <div class="modal-content">
+
+            <div class="modal-header">
+
+              <h1 class="modal-title fs-4 fw-bold text-center"
+                id="upgradeModalLabel ">
+
+                RAM & SSD UPGRADE
+
+              </h1>
+
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+              </button>
+
+            </div>
+
+            <div class="modal-body">
+
+              <div class="container">
+
+                <div class="row align-items-center g-4">
+
+                  <!-- Image -->
+
+                  <div class="col-md-6 text-center">
+
+                    <img src="images/service/ssd1.jpg"
+                      class="modal-main-image"
+                      alt="RAM and SSD Upgrade">
+
+                  </div>
+
+                  <!-- Information -->
+
+                  <div class="col-md-6">
+
+                    <h2 class="fw-bold">
+                      RAM & SSD Upgrade
+                    </h2>
+
+                    <h5 class="fw-bold mt-4">
+                      Service Information
+                    </h5>
+
+                    <p>
+
+                      Upgrade your laptop's RAM and SSD
+                      to improve speed, storage capacity
+                      and overall performance.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                      Description
+                    </h5>
+
+                    <p>
+
+                      We provide professional RAM and SSD
+                      installation services. Our technicians
+                      check laptop compatibility and install
+                      suitable components.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                      Features
+                    </h5>
+
+                    <ul>
+
+                      <li>RAM upgrade</li>
+                      <li>SSD installation</li>
+                      <li>Storage upgrade</li>
+                      <li>System performance optimization</li>
+                      <li>Data migration support</li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <hr class="my-5">
+
+              <div class="container">
+
+                <div class="row g-4">
+
+                  <!-- RAM -->
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      RAM Upgrade
+                    </h5>
+
+                    <img src="images/service/ssd2.jpg"
+                      class="service-small-image"
+                      alt="RAM Upgrade">
+
+                  </div>
+
+                  <!-- Benefits -->
+
+                  <div class="col-md-4">
+
+                    <h5 class="fw-bold text-center mb-3">
+                      Benefits
+                    </h5>
+
+                    <p>
+                      Upgrading RAM and SSD improves laptop speed, multitasking,
+                      boot time, storage capacity, and overall system
+                      responsiveness.
+                      It reduces lag, helps applications run smoothly, and
+                      provides
+                      faster access to files and data.
+                    </p>
+
+                  </div>
+
+                  <!-- SSD -->
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      SSD Upgrade
+                    </h5>
+
+                    <img src="images/service/RAM.jpg"
+                      class="service-small-image"
+                      alt="SSD Upgrade">
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+              <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+
+                Close
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
+      <!-- ===================================================== -->
+      <!-- MODAL 3 - SOFTWARE INSTALLATION -->
+      <!-- ===================================================== -->
 
-      <!-- ================= FOOTER ================= -->
+      <div class="modal fade"
+        id="softwareModal"
+        tabindex="-1"
+        aria-labelledby="softwareModalLabel"
+        aria-hidden="true">
 
-      <div class="modal-footer">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
 
+          <div class="modal-content">
 
-        <button
-          type="button"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal">
+            <div class="modal-header">
 
-          Close
+              <h1 class="modal-title fs-4 fw-bold"
+                id="softwareModalLabel">
 
-        </button>
+                SOFTWARE INSTALLATION SERVICE
 
+              </h1>
 
-        <button
-          type="button"
-          class="btn btn-primary">
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+              </button>
 
-          Book Service
+            </div>
 
-        </button>
+            <div class="modal-body">
 
+              <div class="container">
+
+                <div class="row align-items-center g-4">
+
+                  <!-- Image -->
+
+                  <div class="col-md-6 text-center">
+
+                    <img src="images/service/software2.webp"
+                      class="modal-main-image"
+                      alt="Software Installation">
+
+                  </div>
+
+                  <!-- Information -->
+
+                  <div class="col-md-6">
+
+                    <h2 class="fw-bold">
+                      Software Installation
+                    </h2>
+
+                    <h5 class="fw-bold mt-4">
+                      Service Information
+                    </h5>
+
+                    <p>
+
+                      We provide professional software
+                      installation and system configuration
+                      services for laptops and computers.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                      Description
+                    </h5>
+
+                    <p>
+
+                      Our technicians install operating
+                      systems, applications, drivers and
+                      configure your laptop according to
+                      your requirements.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                      Features
+                    </h5>
+
+                    <ul>
+
+                      <li>Windows installation</li>
+                      <li>Software installation</li>
+                      <li>Driver installation</li>
+                      <li>System configuration</li>
+                      <li>Software troubleshooting</li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <hr class="my-5">
+
+              <div class="container">
+
+                <div class="row g-4">
+
+                  <!-- Windows -->
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      Windows Installation
+                    </h5>
+
+                    <img src="images/service/software3.webp"
+                      class="service-small-image"
+                      alt="Windows Installation">
+
+                  </div>
+
+                  <!-- Benefits -->
+
+                  <div class="col-md-4">
+
+                    <h5 class="fw-bold text-center mb-3">
+                      Benefits
+                    </h5>
+
+                    <p>
+                      Professional software installation ensures that
+                      applications,
+                      drivers, and system tools are installed and configured
+                      correctly.
+                      It improves system stability, reduces software errors,
+                      enhances
+                      security, and helps your laptop run smoothly.
+                    </p>
+
+                  </div>
+
+                  <!-- Software -->
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      Software Setup
+                    </h5>
+
+                    <img src="images/service/software4.jpg"
+                      class="service-small-image"
+                      alt="Software Setup">
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+              <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+
+                Close
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
 
       </div>
 
+      <!-- ===================================================== -->
+      <!-- MODAL 4 - LAPTOP MAINTENANCE -->
+      <!-- ===================================================== -->
 
-    </div>
+      <div class="modal fade"
+        id="maintenanceModal"
+        tabindex="-1"
+        aria-labelledby="maintenanceModalLabel"
+        aria-hidden="true">
 
-  </div>
+        <div class="modal-dialog modal-xl modal-dialog-centered">
 
-</div>
-    <section>
+          <div class="modal-content">
+
+            <div class="modal-header">
+
+              <h1 class="modal-title fs-4 fw-bold"
+                id="maintenanceModalLabel">
+
+                LAPTOP MAINTENANCE SERVICE
+
+              </h1>
+
+              <button type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close">
+              </button>
+
+            </div>
+
+            <div class="modal-body">
+
+              <div class="container">
+
+                <div class="row align-items-center g-4">
+
+                  <!-- Image -->
+
+                  <div class="col-md-6 text-center">
+
+                    <img src="images/service/main3.jpg"
+                      class="modal-main-image"
+                      alt="Laptop Maintenance">
+
+                  </div>
+
+                  <!-- Information -->
+
+                  <div class="col-md-6">
+
+                    <h2 class="fw-bold">
+                      Laptop Maintenance
+                    </h2>
+
+                    <h5 class="fw-bold mt-4">
+                      Service Information
+                    </h5>
+
+                    <p>
+
+                      We provide complete laptop cleaning,
+                      maintenance and performance
+                      optimization services.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                      Description
+                    </h5>
+
+                    <p>
+
+                      Regular maintenance helps prevent
+                      overheating, slow performance and
+                      unexpected laptop problems.
+
+                    </p>
+
+                    <h5 class="fw-bold mt-4">
+                      Features
+                    </h5>
+
+                    <ul>
+
+                      <li>Internal laptop cleaning</li>
+                      <li>Dust removal</li>
+                      <li>Cooling system check</li>
+                      <li>Performance optimization</li>
+                      <li>Hardware inspection</li>
+
+                    </ul>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <hr class="my-5">
+
+              <div class="container">
+
+                <div class="row g-4">
+
+                  <!-- Cleaning -->
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      Laptop Cleaning
+                    </h5>
+
+                    <img src="images/service/main4.jpg"
+                      class="service-small-image"
+                      alt="Laptop Cleaning">
+
+                  </div>
+
+                  <!-- Benefits -->
+
+                  <div class="col-md-4">
+
+                    <h5 class="fw-bold text-center mb-3">
+                      Benefits
+                    </h5>
+
+                    <p>
+                      Regular laptop maintenance keeps your device clean, cool,
+                      and
+                      reliable. It improves performance, prevents overheating,
+                      reduces
+                      hardware problems, increases the lifespan of the laptop,
+                      and helps
+                      avoid costly repairs.
+                    </p>
+
+                  </div>
+
+                  <!-- Maintenance -->
+
+                  <div class="col-md-4 text-center">
+
+                    <h5 class="fw-bold mb-3">
+                      System Maintenance
+                    </h5>
+
+                    <img src="images/service/main1.jpg"
+                      class="service-small-image"
+                      alt="System Maintenance">
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+              <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
+
+                Close
+
+              
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
+
     <footer class="bg-primary text-white pt-5 pb-3">
 
       <div class="container">
@@ -774,6 +1426,7 @@
         <div class="row g-4">
 
           <!-- Brand / About -->
+
           <div class="col-lg-4 col-md-6">
 
             <h4 class="fw-bold text-dark">
@@ -781,59 +1434,83 @@
             </h4>
 
             <p class="text-light mt-3">
+
               Your trusted destination for high-quality laptops,
               accessories and reliable technical services.
               Find the perfect laptop for work, study, gaming
               and everyday use.
+
             </p>
 
             <div class="mt-4">
-              <a href="#" class="text-white me-3 fs-5">Facebook</a>
-              <a href="#" class="text-white me-3 fs-5">Instagram</a>
-              <a href="#" class="text-white fs-5">Twitter</a>
+
+              <a href="#"
+                class="text-white me-3 fs-5">
+                Facebook
+              </a>
+
+              <a href="#"
+                class="text-white me-3 fs-5">
+                Instagram
+              </a>
+
+              <a href="#"
+                class="text-white fs-5">
+                Twitter
+              </a>
+
             </div>
 
           </div>
 
           <!-- Quick Links -->
+
           <div class="col-lg-2 col-md-6">
 
-            <h5 class="fw-bold mb-3 text-dark">Quick Links</h5>
+            <h5 class="fw-bold mb-3 text-dark">
+              Quick Links
+            </h5>
 
             <ul class="list-unstyled">
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="index.html"
+                  class="text-light text-decoration-none">
                   Home
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="about.html"
+                  class="text-light text-decoration-none">
                   About Us
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Products
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Brands
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="services.html"
+                  class="text-light text-decoration-none">
                   Services
                 </a>
               </li>
 
               <li>
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Contact Us
                 </a>
               </li>
@@ -843,44 +1520,53 @@
           </div>
 
           <!-- Laptop Brands -->
+
           <div class="col-lg-3 col-md-6">
 
-            <h5 class="fw-bold mb-3 text-dark">Popular Brands</h5>
+            <h5 class="fw-bold mb-3 text-dark">
+              Popular Brands
+            </h5>
 
             <ul class="list-unstyled">
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   HP Laptops
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Lenovo Laptops
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Dell Laptops
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   ASUS Laptops
                 </a>
               </li>
 
               <li class="mb-2">
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Acer Laptops
                 </a>
               </li>
 
               <li>
-                <a href="#" class="text-light text-decoration-none">
+                <a href="#"
+                  class="text-light text-decoration-none">
                   Apple MacBook
                 </a>
               </li>
@@ -890,25 +1576,36 @@
           </div>
 
           <!-- Contact -->
+
           <div class="col-lg-3 col-md-6">
 
-            <h5 class="fw-bold mb-3 text-dark">Contact Us</h5>
+            <h5 class="fw-bold mb-3 text-dark">
+              Contact Us
+            </h5>
 
             <p class="mb-2">
+
               📍 123 Main Street,<br>
               &nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharashtra
+
             </p>
 
             <p class="mb-2">
+
               📞 +91 98765 43210
+
             </p>
 
             <p class="mb-2">
+
               ✉️ support@laptopstore.com
+
             </p>
 
             <p class="mb-0">
+
               🕒 Mon - Sat: 10:00 AM - 7:00 PM
+
             </p>
 
           </div>
@@ -916,31 +1613,44 @@
         </div>
 
         <!-- Divider -->
+
         <hr class="border-secondary mt-4">
 
         <!-- Bottom Footer -->
+
         <div class="row align-items-center">
 
           <div class="col-md-6 text-center text-md-start">
 
             <p class="mb-0 text-light">
+
               © 2026 Laptop Store. All Rights Reserved.
+
             </p>
 
           </div>
 
           <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
 
-            <a href="#" class="text-light text-decoration-none me-3">
+            <a href="#"
+              class="text-light text-decoration-none me-3">
+
               Privacy Policy
+
             </a>
 
-            <a href="#" class="text-light text-decoration-none me-3">
+            <a href="#"
+              class="text-light text-decoration-none me-3">
+
               Terms & Conditions
+
             </a>
 
-            <a href="#" class="text-light text-decoration-none">
+            <a href="#"
+              class="text-light text-decoration-none">
+
               Support
+
             </a>
 
           </div>
@@ -950,11 +1660,17 @@
       </div>
 
     </footer>
-    </section>
+
+    <!-- ===================================================== -->
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <!-- ===================================================== -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous">
+    </script>
+
   </body>
+
 </html>
