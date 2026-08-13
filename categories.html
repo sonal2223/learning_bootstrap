@@ -8,9 +8,11 @@
     <title>Categories - Laptop World</title>
 
     <!-- Bootstrap CSS -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+   <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
 
     <style>
 
@@ -43,7 +45,7 @@
 
         .laptop-card img {
             width: 100%;
-            height: 220px;
+            height: 300px;
             object-fit: contain;
             background-color: white;
             padding: 15px;
@@ -93,282 +95,83 @@
 <!-- NAVBAR START -->
 <!-- ========================================================= -->
 
-<header>
-
-    <nav class="navbar navbar-expand-lg bg-dark"
-         data-bs-theme="dark">
+<!-- header start -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+        data-bs-theme="dark">
 
         <div class="container-fluid">
 
-            <!-- LOGO -->
-            <a class="navbar-brand" href="index.html">
-
-                <img
-                    src="images/laptop logo.png"
-                    alt="Laptop World Logo"
-                    width="80"
-                    height="50">
-
-                Laptop World
-
-            </a>
-
-
-            <!-- MOBILE BUTTON -->
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-
-            <!-- NAVIGATION -->
-            <div
-                class="collapse navbar-collapse"
-                id="navbarSupportedContent">
-
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-
-                    <!-- HOME -->
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="index.html">
-
-                            Home
-
-                        </a>
-
-                    </li>
-
-
-                    <!-- ABOUT -->
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="about.html">
-
-                            About Us
-
-                        </a>
-
-                    </li>
-
-
-                    <!-- SERVICES -->
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="services.html">
-
-                            Our Services
-
-                        </a>
-
-                    </li>
-
-
-                    <!-- ================================================= -->
-                    <!-- CATEGORIES DROPDOWN -->
-                    <!-- ================================================= -->
-
-                    <li class="nav-item dropdown">
-
-                        <a
-                            class="nav-link dropdown-toggle active"
-                            href="categories.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-
-                            Categories
-
-                        </a>
-
-
-                        <ul class="dropdown-menu">
-
-
-                            <!-- GAMING -->
-                            <li>
-
-                                <a
-                                    class="dropdown-item"
-                                    href="#gaming">
-
-                                    Gaming Laptops
-
-                                </a>
-
-                            </li>
-
-
-                            <!-- BUSINESS -->
-                            <li>
-
-                                <a
-                                    class="dropdown-item"
-                                    href="#business">
-
-                                    Business Laptops
-
-                                </a>
-
-                            </li>
-
-
-                            <!-- STUDENT -->
-                            <li>
-
-                                <a
-                                    class="dropdown-item"
-                                    href="#student">
-
-                                    Student Laptops
-
-                                </a>
-
-                            </li>
-
-
-                            <!-- 2 IN 1 -->
-                            <li>
-
-                                <a
-                                    class="dropdown-item"
-                                    href="#twoinone">
-
-                                    2-in-1 Laptops
-
-                                </a>
-
-                            </li>
-
-
-                            <!-- BUDGET -->
-                            <li>
-
-                                <a
-                                    class="dropdown-item"
-                                    href="#budget">
-
-                                    Budget Laptops
-
-                                </a>
-
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-
-                    <!-- ================================================= -->
-                    <!-- BRANDS DROPDOWN -->
-                    <!-- ================================================= -->
-
-                    <li class="nav-item dropdown">
-
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="brand.html"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false">
-
-                            Brands
-
-                        </a>
-
-
-                        <ul class="dropdown-menu">
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    HP
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Dell
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Lenovo
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    ASUS
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Acer
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="dropdown-item" href="#">
-                                    Apple
-                                </a>
-                            </li>
-
-                        </ul>
-
-                    </li>
-
-
-                    <!-- CONTACT -->
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="#contact">
-
-                            Contact Us
-
-                        </a>
-
-                    </li>
+          <a class="navbar-brand" href="index.html"><img
+              src="images/laptop logo.png"
+              alt="logo" width="80" height="50"> Laptop World</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page"
+                  href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About Us</a>
+              </li>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " href="services.html">Our Services</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              
+                <a class="nav-link active dropdown-toggle"
+                  href="categories.html" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="categories.html#gaming">Gaming Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#business">Business
+                      Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#student">Student Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#twoinone">2-in-1 Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#budget">Budget Laptops</a></li>
 
                 </ul>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="brand.html"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Brands
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HP</a></li>
+                <li><a class="dropdown-item" href="#"> Dell</a></li>
+                <li><a class="dropdown-item" href="#"> Lenovo</a></li>
+                <li><a class="dropdown-item" href="#"> Asus</a></li>
+                <li><a class="dropdown-item" href="#"> Acer</a></li>
+                <li><a class="dropdown-item" href="#"> Apple</a></li>
 
-
-                <!-- SEARCH -->
-                <form class="d-flex" role="search">
-
-                    <input
-                        class="form-control me-2"
-                        type="search"
-                        placeholder="Search"
-                        aria-label="Search">
-
-                </form>
-
-            </div>
-
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex " role="search">
+            <input class="form-control me-2" type="search"
+              placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success"
+              type="submit">Search</button>
+          </form>
         </div>
-
+      </div>
     </nav>
-
-</header>
+  </hearder>
 
 
 <!-- ========================================================= -->
@@ -414,12 +217,12 @@
                 <div class="card laptop-card">
 
                     <img
-                        src="images/categories/gaming1.jpg"
+                        src="images/service/asus gaming.webp"
                         alt="Gaming Laptop">
 
                     <div class="card-body">
 
-                        <h5 class="card-title">
+                        <h5 class="card-title text-center">
                             ASUS ROG Gaming Laptop
                         </h5>
 
@@ -432,9 +235,6 @@
                             ₹85,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
 
                     </div>
 
@@ -446,10 +246,10 @@
             <!-- GAMING LAPTOP 2 -->
             <div class="col-md-4">
 
-                <div class="card laptop-card">
+                <div class="card laptop-card text-center">
 
                     <img
-                        src="images/categories/gaming2.jpg"
+                        src="images/service/lenovo gaming.jpg"
                         alt="Gaming Laptop">
 
                     <div class="card-body">
@@ -467,9 +267,7 @@
                             ₹95,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -481,10 +279,10 @@
             <!-- GAMING LAPTOP 3 -->
             <div class="col-md-4">
 
-                <div class="card laptop-card">
+                <div class="card laptop-card text-center">
 
                     <img
-                        src="images/categories/gaming3.jpg"
+                        src="images/service/hp gaming.webp"
                         alt="Gaming Laptop">
 
                     <div class="card-body">
@@ -502,9 +300,7 @@
                             ₹78,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                    
 
                     </div>
 
@@ -524,7 +320,7 @@
 <!-- BUSINESS LAPTOPS -->
 <!-- ========================================================= -->
 
-<section id="business" class="category-section">
+<section id="business" class="category-section bg-primary">
 
     <div class="container">
 
@@ -538,10 +334,10 @@
 
             <div class="col-md-4">
 
-                <div class="card laptop-card">
+                <div class="card laptop-card text-center">
 
                     <img
-                        src="images/categories/business1.jpg"
+                        src="images/dell laptop.jpg"
                         alt="Business Laptop">
 
                     <div class="card-body">
@@ -559,9 +355,7 @@
                             ₹65,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -572,10 +366,10 @@
 
             <div class="col-md-4">
 
-                <div class="card laptop-card">
+                <div class="card laptop-card text-center">
 
                     <img
-                        src="images/categories/business2.jpg"
+                        src="images/service/lenovo business.webp"
                         alt="Business Laptop">
 
                     <div class="card-body">
@@ -593,9 +387,7 @@
                             ₹72,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -606,10 +398,10 @@
 
             <div class="col-md-4">
 
-                <div class="card laptop-card">
+                <div class="card laptop-card text-center">
 
                     <img
-                        src="images/categories/business3.jpg"
+                        src="images/service/hp business.webp"
                         alt="Business Laptop">
 
                     <div class="card-body">
@@ -627,9 +419,7 @@
                             ₹68,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -666,7 +456,7 @@
                 <div class="card laptop-card">
 
                     <img
-                        src="images/categories/student1.jpg"
+                        src="images/slider images/hp laptop.webp"
                         alt="Student Laptop">
 
                     <div class="card-body">
@@ -684,9 +474,7 @@
                             ₹55,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -700,7 +488,7 @@
                 <div class="card laptop-card">
 
                     <img
-                        src="images/categories/student2.jpg"
+                        src="images/slider images/asus laptop.jpg"
                         alt="Student Laptop">
 
                     <div class="card-body">
@@ -718,9 +506,7 @@
                             ₹45,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -734,7 +520,7 @@
                 <div class="card laptop-card">
 
                     <img
-                        src="images/categories/student3.jpg"
+                        src="images/slider images/lenovo laptop.jpg"
                         alt="Student Laptop">
 
                     <div class="card-body">
@@ -752,9 +538,7 @@
                             ₹48,000
                         </p>
 
-                        <button class="btn btn-primary">
-                            View Details
-                        </button>
+                        
 
                     </div>
 
@@ -1215,9 +999,11 @@
 <!-- BOOTSTRAP JAVASCRIPT -->
 <!-- ========================================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-</script>
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous">
+    </script>
 
 
 </body>
