@@ -72,195 +72,80 @@
     <!-- ===================================================== -->
 
     <header>
-
-      <nav class="navbar navbar-expand-lg bg-dark"
+      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
         data-bs-theme="dark">
 
         <div class="container-fluid">
 
-          <!-- Logo -->
-          <a class="navbar-brand" href="index.html">
-            <img src="images/laptop logo.png"
-              alt="Laptop Logo"
-              width="80"
-              height="50">
-            Laptop World
-          </a>
-
-          <!-- Mobile Menu Button -->
-          <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
+          <a class="navbar-brand" href="index.html"><img
+              src="images/laptop logo.png"
+              alt="logo" width="80" height="50"> Laptop World</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-
             <span class="navbar-toggler-icon"></span>
-
           </button>
-
-          <!-- Navbar Links -->
-          <div class="collapse navbar-collapse"
-            id="navbarSupportedContent">
-
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-              <!-- Home -->
               <li class="nav-item">
-                <a class="nav-link"
-                  href="index.html">
-                  Home
-                </a>
+                <a class="nav-link active" aria-current="page"
+                  href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html">About Us</a>
               </li>
 
-              <!-- About -->
-              <li class="nav-item">
-                <a class="nav-link"
-                  href="about.html">
-                  About Us
-                </a>
-              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active " href="services.html">Our Services</a>
+            </li>
 
-              <!-- Services -->
-              <li class="nav-item">
-                <a class="nav-link active"
-                  aria-current="page"
-                  href="services.html">
-                  Our Services
-                </a>
-              </li>
-
-              <!-- Categories -->
-              <li class="nav-item dropdown">
-
-                <a class="nav-link dropdown-toggle"
-                  href="categories.html"
-                  role="button"
-                  data-bs-toggle="dropdown"
+            <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle"
+                  href="categories.html" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
-
                   Categories
-
                 </a>
-
                 <ul class="dropdown-menu">
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Gaming Laptops
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Business Laptops
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Student Laptops
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      2-in-1 Laptops
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Budget Laptops
-                    </a>
-                  </li>
+                  <li><a class="dropdown-item" href="categories.html#gaming">Gaming Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#business">Business
+                      Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#student">Student Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#twoinone">2-in-1 Laptops</a></li>
+                  <li><a class="dropdown-item" href="categories.html#budget">Budget Laptops</a></li>
 
                 </ul>
-
               </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="brand.html"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Brands
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">HP</a></li>
+                <li><a class="dropdown-item" href="#"> Dell</a></li>
+                <li><a class="dropdown-item" href="#"> Lenovo</a></li>
+                <li><a class="dropdown-item" href="#"> Asus</a></li>
+                <li><a class="dropdown-item" href="#"> Acer</a></li>
+                <li><a class="dropdown-item" href="#"> Apple</a></li>
 
-              <!-- Brands -->
-              <li class="nav-item dropdown">
-
-                <a class="nav-link dropdown-toggle"
-                  href="brand.html"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false">
-
-                  Brands
-
-                </a>
-
-                <ul class="dropdown-menu">
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      HP
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Dell
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Lenovo
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      ASUS
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Acer
-                    </a>
-                  </li>
-
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Apple
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <!-- Contact -->
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Contact Us
-                </a>
-              </li>
-
-            </ul>
-
-            <!-- Search -->
-            <form class="d-flex" role="search">
-
-              <input class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search">
-
-            </form>
-
-          </div>
-
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex " role="search">
+            <input class="form-control me-2" type="search"
+              placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success"
+              type="submit">Search</button>
+          </form>
         </div>
-
-      </nav>
-
-    </header>
+      </div>
+    </nav>
+  </hearder>
 
     <!-- ===================================================== -->
     <!-- WHAT WE PROVIDE -->
