@@ -1,102 +1,1328 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>brand page</title>
+
+    <title>Laptop Brands</title>
+
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous">
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+
     <style>
-  .carousel-item img {
-    width: 80%;
-    height: 550px;
-    object-fit: cover;
-  }
-</style>
-  </head>
-  <body>
 
-    <!-- header start -->
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* =========================
+           PAGE HEADING
+        ========================= */
+
+        .brand-heading {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .brand-heading h1 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .brand-heading p {
+            color: #666;
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           BRAND SECTION
+        ========================= */
+
+        .brand-section {
+            padding: 60px 0;
+        }
+
+
+        .brand-box {
+            padding: 50px 0;
+            border-bottom: 1px solid #ddd;
+
+            scroll-margin-top: 80px;
+        }
+
+        .brand-box:last-child {
+            border-bottom: none;
+        }
+
+
+        /* =========================
+           BRAND TITLE
+        ========================= */
+
+        .brand-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           BRAND IMAGE
+        ========================= */
+
+        .brand-image {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+
+            background-color: #f8f9fa;
+
+            border: 1px solid #ddd;
+            border-radius: 10px;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           BRAND VIDEO
+        ========================= */
+
+        .brand-video {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            background-color: #000;
+
+            border-radius: 10px;
+
+            border: 1px solid #ddd;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .brand-description {
+            margin-top: 25px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .brand-image,
+            .brand-video {
+                height: 280px;
+            }
+
+            .brand-title {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+                         HEADER START
+    =================================================== -->
+
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
-        data-bs-theme="dark">
 
-        <div class="container-fluid">
+        <nav
+            class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+            data-bs-theme="dark">
 
-          <a class="navbar-brand" href="index.html"><img
-              src="images/laptop logo.png"
-              alt="logo" width="80" height="50"> Laptop World</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page"
-                  href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="about.html">About Us</a>
-              </li>
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="services.html">Our Services</a>
-              </li>
+            <div class="container-fluid">
 
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle"
-                  href="categories.html" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Categories
+
+                <!-- LOGO -->
+
+                <a
+                    class="navbar-brand"
+                    href="index.html">
+
+                    <img
+                        src="images/laptop logo.png"
+                        alt="logo"
+                        width="80"
+                        height="50">
+
+                    Laptop World
+
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="categories.html#gaming">Gaming Laptops</a></li>
-                  <li><a class="dropdown-item" href="categories.html#business">Business
-                      Laptops</a></li>
-                  <li><a class="dropdown-item" href="categories.html#student">Student Laptops</a></li>
-                  <li><a class="dropdown-item" href="categories.html#twoinone">2-in-1 Laptops</a></li>
-                  <li><a class="dropdown-item" href="categories.html#budget">Budget Laptops</a></li>
 
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link active dropdown-toggle" href="brand.html"
-                  role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Brands
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">HP</a></li>
-                  <li><a class="dropdown-item" href="#"> Dell</a></li>
-                  <li><a class="dropdown-item" href="#"> Lenovo</a></li>
-                  <li><a class="dropdown-item" href="#"> Asus</a></li>
-                  <li><a class="dropdown-item" href="#"> Acer</a></li>
-                  <li><a class="dropdown-item" href="#"> Apple</a></li>
 
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search"
-                placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success"
-                type="submit">Search</button>
-            </form>
-          </div>
+                <!-- MOBILE BUTTON -->
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <!-- NAVBAR -->
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                        <!-- HOME -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                href="index.html">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- ABOUT -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                href="about.html">
+
+                                About Us
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- SERVICES -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                href="services.html">
+
+                                Our Services
+
+                            </a>
+
+                        </li>
+
+
+                        <!-- =================================================
+                             CATEGORIES DROPDOWN
+                        ================================================== -->
+
+                        <li class="nav-item dropdown">
+
+                            <a
+                                class="nav-link active dropdown-toggle"
+                                href="categories.html"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Categories
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="categories.html#gaming">
+
+                                        Gaming Laptops
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="categories.html#business">
+
+                                        Business Laptops
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="categories.html#student">
+
+                                        Student Laptops
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="categories.html#twoinone">
+
+                                        2-in-1 Laptops
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="categories.html#budget">
+
+                                        Budget Laptops
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                        <!-- =================================================
+                             BRANDS DROPDOWN
+                        ================================================== -->
+
+                        <li class="nav-item dropdown">
+
+
+                            <a
+                                class="nav-link active dropdown-toggle"
+                                href="brands.html"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                Brands
+
+                            </a>
+
+
+                            <ul class="dropdown-menu">
+
+
+                                <!-- HP -->
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="brands.html#hp">
+
+                                        HP
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- DELL -->
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="brands.html#dell">
+
+                                        Dell
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- LENOVO -->
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="brands.html#lenovo">
+
+                                        Lenovo
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- ASUS -->
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="brands.html#asus">
+
+                                        Asus
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- ACER -->
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="brands.html#acer">
+
+                                        Acer
+
+                                    </a>
+
+                                </li>
+
+
+                                <!-- APPLE -->
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item"
+                                        href="brands.html#apple">
+
+                                        Apple
+
+                                    </a>
+
+                                </li>
+
+
+                            </ul>
+
+                        </li>
+
+
+                        <!-- CONTACT -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                href="contact.html">
+
+                                Contact Us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+
+                    <!-- SEARCH -->
+
+                    <form
+                        class="d-flex"
+                        role="search">
+
+                        <input
+                            class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search">
+
+                        <button
+                            class="btn btn-outline-success"
+                            type="submit">
+
+                            Search
+
+                        </button>
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- HEADER END -->
+
+
+
+    <!-- ==================================================
+                     PAGE HEADING
+    =================================================== -->
+
+    <section class="brand-heading">
+
+        <div class="container">
+
+            <h1>
+                Our Laptop Brands
+            </h1>
+
+            <p>
+                Explore laptops from leading laptop brands
+            </p>
+
         </div>
-      </nav>
-    </hearder>
+
+    </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <!-- ==================================================
+                     BRAND SECTIONS
+    =================================================== -->
+
+    <section class="brand-section">
+
+
+        <div class="container">
+
+
+            <!-- =================================================
+                              HP SECTION
+            ================================================== -->
+
+            <div
+                class="brand-box"
+                id="hp">
+
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            HP Laptops
+                        </h2>
+
+
+                        <img
+                            src="images/hp laptop.jpg"
+                            alt="HP Laptop"
+                            class="brand-image">
+
+                    </div>
+
+
+                    <!-- VIDEO -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            HP Laptop
+                        </h2>
+
+
+                        <video
+                            class="brand-video"
+                            controls>
+
+                            <source
+                                src="videos/hp-laptop.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support
+                            the video tag.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <p class="brand-description">
+
+                            HP offers a wide range of laptops for
+                            students, professionals, business users
+                            and everyday computing.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                              DELL SECTION
+            ================================================== -->
+
+            <div
+                class="brand-box"
+                id="dell">
+
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Dell Laptops
+                        </h2>
+
+
+                        <img
+                            src="images/dell laptop.jpg"
+                            alt="Dell Laptop"
+                            class="brand-image">
+
+                    </div>
+
+
+                    <!-- VIDEO -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Dell Laptop
+                        </h2>
+
+
+                        <video
+                            class="brand-video"
+                            controls>
+
+                            <source
+                                src="videos/dell-laptop.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support
+                            the video tag.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <p class="brand-description">
+
+                            Dell laptops provide reliable performance,
+                            quality design and powerful options for
+                            work, study and everyday activities.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                              LENOVO SECTION
+            ================================================== -->
+
+            <div
+                class="brand-box"
+                id="lenovo">
+
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Lenovo Laptops
+                        </h2>
+
+
+                        <img
+                            src="images/lenovo laptop.jpg"
+                            alt="Lenovo Laptop"
+                            class="brand-image">
+
+                    </div>
+
+
+                    <!-- VIDEO -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Lenovo Laptop
+                        </h2>
+
+
+                        <video
+                            class="brand-video"
+                            controls>
+
+                            <source
+                                src="videos/lenovo-laptop.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support
+                            the video tag.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <p class="brand-description">
+
+                            Lenovo provides laptops suitable for
+                            students, professionals, business users
+                            and gaming enthusiasts.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                              ASUS SECTION
+            ================================================== -->
+
+            <div
+                class="brand-box"
+                id="asus">
+
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            ASUS Laptops
+                        </h2>
+
+
+                        <img
+                            src="images/slider images/asus laptop.jpg"
+                            alt="ASUS Laptop"
+                            class="brand-image">
+
+                    </div>
+
+
+                    <!-- VIDEO -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            ASUS Laptop
+                        </h2>
+
+
+                        <video
+                            class="brand-video"
+                            controls>
+
+                            <source
+                                src="videos/asus-laptop.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support
+                            the video tag.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <p class="brand-description">
+
+                            ASUS laptops combine modern design,
+                            powerful hardware and technology for
+                            everyday users and gaming.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                              ACER SECTION
+            ================================================== -->
+
+            <div
+                class="brand-box"
+                id="acer">
+
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Acer Laptops
+                        </h2>
+
+
+                        <img
+                            src="images/acer laptop.jpg"
+                            alt="Acer Laptop"
+                            class="brand-image">
+
+                    </div>
+
+
+                    <!-- VIDEO -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Acer Laptop
+                        </h2>
+
+
+                        <video
+                            class="brand-video"
+                            controls>
+
+                            <source
+                                src="videos/acer-laptop.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support
+                            the video tag.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <p class="brand-description">
+
+                            Acer provides affordable and versatile
+                            laptops for students, professionals,
+                            entertainment and gaming.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                              APPLE SECTION
+            ================================================== -->
+
+            <div
+                class="brand-box"
+                id="apple">
+
+
+                <div class="row align-items-center g-4">
+
+
+                    <!-- IMAGE -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Apple MacBook
+                        </h2>
+
+
+                        <img
+                            src="images/slider images/about laptop.jpg"
+                            alt="Apple MacBook"
+                            class="brand-image">
+
+                    </div>
+
+
+                    <!-- VIDEO -->
+
+                    <div class="col-md-6">
+
+                        <h2 class="brand-title">
+                            Apple MacBook
+                        </h2>
+
+
+                        <video
+                            class="brand-video"
+                            controls>
+
+                            <source
+                                src="videos/apple-macbook.mp4"
+                                type="video/mp4">
+
+                            Your browser does not support
+                            the video tag.
+
+                        </video>
+
+                    </div>
+
+
+                    <div class="col-12">
+
+                        <p class="brand-description">
+
+                            Apple MacBooks offer premium design,
+                            powerful performance, excellent battery
+                            life and a smooth user experience.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+                          FOOTER
+    =================================================== -->
+
+    <footer class="bg-primary text-white pt-5 pb-3">
+
+
+        <div class="container">
+
+
+            <div class="row g-4">
+
+
+                <!-- ABOUT -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h4 class="fw-bold text-dark">
+                        Laptop Store
+                    </h4>
+
+                    <p class="text-light mt-3">
+
+                        Your trusted destination for
+                        high-quality laptops, accessories
+                        and reliable technical services.
+
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="fw-bold mb-3 text-dark">
+                        Quick Links
+                    </h5>
+
+
+                    <ul class="list-unstyled">
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="index.html"
+                                class="text-light text-decoration-none">
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="about.html"
+                                class="text-light text-decoration-none">
+
+                                About Us
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="categories.html"
+                                class="text-light text-decoration-none">
+
+                                Products
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="brands.html"
+                                class="text-light text-decoration-none">
+
+                                Brands
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="services.html"
+                                class="text-light text-decoration-none">
+
+                                Services
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="contact.html"
+                                class="text-light text-decoration-none">
+
+                                Contact Us
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <!-- POPULAR BRANDS -->
+
+                <div class="col-lg-3 col-md-6">
+
+
+                    <h5 class="fw-bold mb-3 text-dark">
+                        Popular Brands
+                    </h5>
+
+
+                    <ul class="list-unstyled">
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="brands.html#hp"
+                                class="text-light text-decoration-none">
+
+                                HP Laptops
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="brands.html#dell"
+                                class="text-light text-decoration-none">
+
+                                Dell Laptops
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="brands.html#lenovo"
+                                class="text-light text-decoration-none">
+
+                                Lenovo Laptops
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="brands.html#asus"
+                                class="text-light text-decoration-none">
+
+                                ASUS Laptops
+
+                            </a>
+
+                        </li>
+
+
+                        <li class="mb-2">
+
+                            <a
+                                href="brands.html#acer"
+                                class="text-light text-decoration-none">
+
+                                Acer Laptops
+
+                            </a>
+
+                        </li>
+
+
+                        <li>
+
+                            <a
+                                href="brands.html#apple"
+                                class="text-light text-decoration-none">
+
+                                Apple MacBook
+
+                            </a>
+
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="col-lg-3 col-md-6">
+
+
+                    <h5 class="fw-bold mb-3 text-dark">
+                        Contact Us
+                    </h5>
+
+
+                    <p class="mb-2">
+                        📍 123 Main Street,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharashtra
+                    </p>
+
+
+                    <p class="mb-2">
+                        📞 +91 98765 43210
+                    </p>
+
+
+                    <p class="mb-2">
+                        ✉️ support@laptopstore.com
+                    </p>
+
+
+                    <p class="mb-0">
+                        🕒 Mon - Sat: 10:00 AM - 7:00 PM
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <hr class="border-secondary mt-4">
+
+
+            <div class="row align-items-center">
+
+
+                <div class="col-md-6 text-center text-md-start">
+
+                    <p class="mb-0 text-light">
+
+                        © 2026 Laptop Store.
+                        All Rights Reserved.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+
+
+                    <a
+                        href="#"
+                        class="text-light text-decoration-none me-3">
+
+                        Privacy Policy
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="text-light text-decoration-none me-3">
+
+                        Terms & Conditions
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="text-light text-decoration-none">
+
+                        Support
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwxHj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+
 </body>
+
 </html>
