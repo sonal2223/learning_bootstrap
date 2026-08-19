@@ -1,0 +1,335 @@
+/* ===== about.html ===== */
+.carousel-item img {
+    width: 80%;
+    height: 550px;
+    object-fit: cover;
+  }
+
+.card:hover{
+      background-color: black;
+      color: white;
+    }
+
+/* ===== brands.html ===== */
+/* =========================
+           PAGE HEADING
+        ========================= */
+
+        .brand-heading {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .brand-heading h1 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .brand-heading p {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           BRAND SECTION
+        ========================= */
+
+        .brand-section {
+            padding: 30px 0;
+            scroll-margin-top: 80px;
+        }
+
+
+        /* =========================
+           BRAND BOX
+        ========================= */
+
+        .brand-box {
+            padding: 20px 0;
+            border-bottom: 0px solid #ddd;
+        }
+
+
+        /* =========================
+           BRAND HEADING
+        ========================= */
+
+        .brand-box h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           BRAND IMAGE
+        ========================= */
+
+        .brand-image {
+            width: 100%;
+            height: 350px;
+
+            object-fit: contain;
+
+            background-color: #f8f9fa;
+
+            border: 1px solid #ddd;
+            border-radius: 10px;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+           BRAND VIDEO
+        ========================= */
+
+        .brand-video {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            background-color: #000;
+
+            border-radius: 10px;
+
+            border: 1px solid #ddd;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+
+        /* =========================
+           DROPDOWN
+        ========================= */
+
+        .dropdown-menu {
+            z-index: 2000;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer a:hover {
+            text-decoration: underline !important;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .brand-image,
+            .brand-video {
+                height: 280px;
+            }
+
+            .brand-box h1 {
+                font-size: 28px;
+            }
+
+        }
+
+/* ===== categories.html ===== */
+body {
+            background-color: #f8f9fa;
+        }
+
+        .category-section {
+            padding: 30px 0;
+        }
+
+        .category-title {
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .laptop-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            height: 100%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .laptop-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .laptop-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            background-color: white;
+            padding: 15px;
+        }
+
+        .laptop-card .card-body {
+            padding: 20px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .category-banner {
+            background-color: #0d6efd;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .category-banner h1 {
+            font-weight: bold;
+        }
+
+        .category-section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        footer {
+            background-color: #0d6efd;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+/* ===== contact.html ===== */
+.carousel-item img {
+    width: 80%;
+    height: 550px;
+    object-fit: cover;
+  }
+
+/* PAGE HEADING */
+
+.brand-heading {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.brand-heading h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.brand-heading p {
+    color: #666;
+    margin-bottom: 0;
+
+  
+}
+
+/* ===== index.html ===== */
+.carousel-item img {
+    width: 80%;
+    height: 550px;
+    object-fit: cover;
+  }
+
+.card:hover{
+        background-color:black;
+        color:white;
+      }
+
+/* ===== services.html ===== */
+/* Service cards */
+        .service-card {
+            height: 100%;
+            transition: 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card img {
+            height: 185px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-card .card-body {
+            min-height: 205px;
+        }
+
+        /* Modal images */
+        .modal-main-image {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .service-small-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer a:hover {
+            text-decoration: underline !important;
+        }
+
+
+/* ===== COMMON SITE BEHAVIOR ===== */
+/* Keep the navigation visible while the page is scrolled. */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* Keep dropdown menus above page content when the navbar is sticky. */
+.dropdown-menu {
+    z-index: 2000;
+}
+
+
+/* Sticky navigation - applied site-wide */
+.navbar,
+nav.navbar,
+header .navbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1030 !important;
+}
+
+
+
+/* sticky  */
+.site-header,
+.navbar,
+.navbar-container,
+.main-navbar,
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
