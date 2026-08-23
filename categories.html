@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Categories - Laptop World</title>
+    <title>Laptop Categories | Gaming, Business, Student & More</title>
+    <meta property="og:title" content="Laptop Categories | Gaming, Business, Student & More">
+    <meta property="og:description" content="Explore gaming, business, student, 2-in-1 and budget laptop categories at Laptop World.">
+    <meta property="og:type" content="website">
+    <meta name="description" content="Explore gaming, business, student, 2-in-1 and budget laptop categories at Laptop World.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Laptop World">
+    <meta property="og:site_name" content="Laptop World">
+    <meta property="og:locale" content="en_IN">
+    <meta name="theme-color" content="#11c5e8">
 
     <!-- Bootstrap CSS -->
    <link
@@ -14,9 +23,27 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-  </head>
+    <link rel="stylesheet" href="css/enhancements.css">
+    <link rel="stylesheet" href="css/pro-effects.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Laptop World",
+    "telephone": "+91 98765 43210",
+    "email": "support@laptopstore.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
 
-<body>
+<body class="lw-categories">
     
 <!-- NAVBAR START -->
 
@@ -57,6 +84,8 @@
                   Categories
                 </a>
                 <ul class="dropdown-menu">
+                  <li><h6 class="dropdown-header">Browse Categories</h6></li>
+                  <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="categories.html#gaming">Gaming Laptops</a></li>
                   <li><a class="dropdown-item" href="categories.html#business">Business
                       Laptops</a></li>
@@ -72,6 +101,8 @@
                 Brands
               </a>
               <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Browse Brands</h6></li>
+                <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="brands.html#hp">HP</a></li>
                 <li><a class="dropdown-item" href="brands.html#dell"> Dell</a></li>
                 <li><a class="dropdown-item" href="brands.html#lenovo"> Lenovo</a></li>
@@ -80,18 +111,35 @@
 
               </ul>
             </li>
-            <li class="nav-item">
+                        <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="faq.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+              <ul class="dropdown-menu">
+                <li><h6 class="dropdown-header">Helpful Resources</h6></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="laptop-guide.html">Laptop Buying Guide</a></li>
+              </ul>
+            </li>
+<li class="nav-item">
               <a class="nav-link active" href="contact.html">Contact Us</a>
             </li>
           </ul>
-          <form class="d-flex " role="search">
-            <input class="form-control me-2" type="search"
+          <form class="d-flex" role="search">
+            <label class="visually-hidden" for="site-search">Search Laptop World</label>
+            <input id="site-search" class="form-control me-2" type="search"
               placeholder="Search" aria-label="Search" />
             
           </form>
         </div>
       </div>
     </nav>
+
+      <!-- Laptop World header marquee -->
+      <div class="lw-marquee-bar" role="region" aria-label="Laptop World announcements">
+        <marquee class="lw-marquee" behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();">
+          💻 Laptop World &nbsp; • &nbsp; Quality Laptops &nbsp; • &nbsp; Trusted Brands &nbsp; • &nbsp; Expert Laptop Services &nbsp; • &nbsp; SSD &amp; RAM Upgrades &nbsp; • &nbsp; Laptop Repair &nbsp; • &nbsp; Best Deals for Students, Professionals &amp; Gamers &nbsp; • &nbsp; Contact Us for Support
+        </marquee>
+      </div>
   </header>
   <!-- header end -->
 
@@ -102,7 +150,7 @@
 
         <h1 class="text-dark">Laptop Categories</h1>
 
-        <p class="lead">
+        <p class="lead text-dark">
             Find the perfect laptop according to your needs,
             budget and lifestyle.
         </p>
@@ -671,189 +719,70 @@
 
 <!-- contact footer -->
 <section>
-      <footer class="bg-info text-white pt-5 pb-3">
-
-        <div class="container">
-
-          <div class="row g-4">
-
-            <!-- Brand / About -->
-            <div class="col-lg-4 col-md-6">
-
-              <h4 class="fw-bold text-dark">
-                 Laptop Store
-              </h4>
-
-              <p class="text-light mt-3">
-                Your trusted destination for high-quality laptops,
-                accessories and reliable technical services.
-                Find the perfect laptop for work, study, gaming
-                and everyday use.
-              </p>
-
-              <div class="mt-4">
-                <a href="#" class="text-white me-3 fs-5">Facebook</a>
-                <a href="#" class="text-white me-3 fs-5">Instagram</a>
-                <a href="#" class="text-white fs-5">Twitter</a>
-              </div>
-
-            </div>
-
-            <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6">
-
-              <h5 class="fw-bold mb-3 text-dark">Quick Links</h5>
-
-              <ul class="list-unstyled">
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Home
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    About Us
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Products
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Brands
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Services
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-light text-decoration-none">
-                    Contact Us
-                  </a>
-                </li>
-
-              </ul>
-
-            </div>
-
-            <!-- Laptop Brands -->
-            <div class="col-lg-3 col-md-6">
-
-              <h5 class="fw-bold mb-3 text-dark">Popular Brands</h5>
-
-              <ul class="list-unstyled">
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    HP Laptops
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Lenovo Laptops
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Dell Laptops
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    ASUS Laptops
-                  </a>
-                </li>
-
-                <li class="mb-2">
-                  <a href="#" class="text-light text-decoration-none">
-                    Acer Laptops
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="text-light text-decoration-none">
-                    Apple MacBook
-                  </a>
-                </li>
-
-              </ul>
-
-            </div>
-
-            <!-- Contact -->
-            <div class="col-lg-3 col-md-6">
-
-              <h5 class="fw-bold mb-3 text-dark">Contact Us</h5>
-
-              <p class="mb-2">
-                📍 123 Main Street,<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharashtra
-              </p>
-
-              <p class="mb-2">
-                📞 +91 98765 43210
-              </p>
-
-              <p class="mb-2">
-                ✉️ support@laptopstore.com
-              </p>
-
-              <p class="mb-0">
-                🕒 Mon - Sat: 10:00 AM - 7:00 PM
-              </p>
-
-            </div>
-
-          </div>
-
-          <!-- Divider -->
-          <hr class="border-secondary mt-4">
-
-          <!-- Bottom Footer -->
-          <div class="row align-items-center">
-
-            <div class="col-md-6 text-center text-md-start">
-
-              <p class="mb-0 text-light">
-                © 2026 Laptop Store. All Rights Reserved.
-              </p>
-
-            </div>
-
-            <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-
-              <a href="#" class="text-light text-decoration-none me-3">
-                Privacy Policy 
-              </a>
-
-              <a href="#" class="text-light text-decoration-none me-3">
-                Terms & Conditions
-              </a>
-
-              <a href="#" class="text-light text-decoration-none">
-                Support
-              </a>
-
-            </div>
-
-          </div>
-
+      <footer class="lw-footer text-white pt-5 pb-3" aria-label="Website footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="lw-footer-brand d-flex align-items-center gap-2 mb-3">
+          <img src="images/slider images/lapptop logo.png" alt="Laptop World logo" width="62" height="44" loading="lazy">
+          <h4 class="fw-bold mb-0">Laptop World</h4>
         </div>
+        <p class="mt-3 mb-3">Your trusted destination for high-quality laptops, accessories and reliable technical services. Find the perfect laptop for work, study, gaming and everyday use.</p>
+        <div class="lw-social" aria-label="Social media links">
+          <a href="#" aria-label="Facebook" title="Facebook">f</a>
+          <a href="#" aria-label="Instagram" title="Instagram">◎</a>
+          <a href="#" aria-label="Twitter" title="Twitter">𝕏</a>
+        </div>
+      </div>
 
-      </footer>
+      <div class="col-lg-2 col-md-6">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+          <li class="mb-2"><a href="about.html" class="text-decoration-none">About Us</a></li>
+          <li class="mb-2"><a href="categories.html" class="text-decoration-none">Categories</a></li>
+          <li class="mb-2"><a href="brands.html" class="text-decoration-none">Brands</a></li>
+          <li class="mb-2"><a href="services.html" class="text-decoration-none">Services</a></li>
+          <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+          <li class="mb-2"><a href="laptop-guide.html" class="text-decoration-none">Laptop Buying Guide</a></li>
+          <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Popular Brands</h5>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-2"><a href="brands.html#hp" class="text-decoration-none">HP Laptops</a></li>
+          <li class="mb-2"><a href="brands.html#lenovo" class="text-decoration-none">Lenovo Laptops</a></li>
+          <li class="mb-2"><a href="brands.html#dell" class="text-decoration-none">Dell Laptops</a></li>
+          <li class="mb-2"><a href="brands.html#asus" class="text-decoration-none">ASUS Laptops</a></li>
+          <li class="mb-2"><a href="brands.html#apple" class="text-decoration-none">Apple MacBook</a></li>
+          <li><a href="categories.html#gaming" class="text-decoration-none">Gaming Laptops</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Contact Us</h5>
+        <p class="mb-2">📍 123 Main Street,<br>&nbsp;&nbsp;&nbsp;&nbsp;Pune, Maharashtra</p>
+        <p class="mb-2">📞 <a href="tel:+919876543210" class="text-decoration-none">+91 98765 43210</a></p>
+        <p class="mb-2">✉️ <a href="mailto:support@laptopstore.com" class="text-decoration-none">support@laptopstore.com</a></p>
+        <p class="mb-0">🕒 Mon - Sat: 10:00 AM - 7:00 PM</p>
+      </div>
+    </div>
+
+    <hr class="lw-divider mt-4">
+    <div class="row align-items-center gy-2">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">© <span data-current-year>2026</span> Laptop World. All Rights Reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end lw-legal">
+        <a href="privacy-policy.html" class="text-decoration-none me-3">Privacy Policy</a>
+        <a href="terms-conditions.html" class="text-decoration-none me-3">Terms &amp; Conditions</a>
+        <a href="support.html" class="text-decoration-none">Support</a>
+      </div>
+    </div>
+  </div>
+</footer>
     </section>
 
 <!-- BOOTSTRAP JAVASCRIPT -->
@@ -862,5 +791,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous">
     </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
