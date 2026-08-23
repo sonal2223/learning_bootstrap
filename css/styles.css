@@ -333,3 +333,6 @@ header {
   z-index: 1000;
 }
 
+.border{
+    box-shadow: 20px 30px 40px gray;
+}
