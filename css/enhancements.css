@@ -259,6 +259,15 @@ h1, h2, h3, h4, h5 { letter-spacing: -.2px; }
 [data-lw-reveal].lw-visible { opacity: 1; transform: translateY(0); }
 
 /* Footer */
+.lw-social a:nth-child(1) i {
+    color: #1877F2;
+  }
+    .lw-social a:nth-child(2) i {
+    color: #E4405F;
+    }
+    .lw-social a:nth-child(3) i {
+    color: #ffffff;
+  }
 footer.lw-footer {
   position: relative;
   overflow: hidden;
