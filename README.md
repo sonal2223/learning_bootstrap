@@ -6,7 +6,7 @@
 
 The website provides users with information about laptops, brands, categories, services, support, and buying guidance. It is designed with a clean and responsive interface that works across desktop, tablet, and mobile devices.
 
-## ✨ Features
+## ✨ Features.
 
 * 📱 Responsive design using Bootstrap
 * 🏠 Home page with navigation and carousel
