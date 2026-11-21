@@ -2,7 +2,7 @@
 
 **Laptop World** is a responsive and modern laptop store website developed using **HTML5, CSS3, JavaScript, and Bootstrap**. The project demonstrates Bootstrap components, responsive layouts, navigation, grids, cards, forms, carousels, and other front-end concepts..
 
-## 📌 Project Overview
+## 📌 Project Overview.
 
 The website provides users with information about laptops, brands, categories, services, support, and buying guidance. It is designed with a clean and responsive interface that works across desktop, tablet, and mobile devices.
 
