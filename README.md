@@ -8,7 +8,7 @@ The website provides users with information about laptops, brands, categories, s
 
 ## ✨ Features.
 
-* 📱 Responsive design using Bootstrap
+* 📱 Responsive design using Bootstrap.
 * 🏠 Home page with navigation and carousel
 * 💻 Laptop categories
 * 🏷️ Popular laptop brands
