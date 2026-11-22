@@ -10,7 +10,7 @@ The website provides users with information about laptops, brands, categories, s
 
 * 📱 Responsive design using Bootstrap.
 * 🏠 Home page with navigation and carousel
-* 💻 Laptop categories
+* 💻 Laptop categories.
 * 🏷️ Popular laptop brands
 * 🛠️ Services section
 * 📖 Laptop buying guide
