@@ -12,7 +12,7 @@ The website provides users with information about laptops, brands, categories, s
 * 🏠 Home page with navigation and carousel
 * 💻 Laptop categories.
 * 🏷️ Popular laptop brands.
-* 🛠️ Services section
+* 🛠️ Services section.
 * 📖 Laptop buying guide
 * ❓ FAQ section
 * 📞 Contact page
